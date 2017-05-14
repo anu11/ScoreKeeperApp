@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">ScoreKeeperApp</string>
+    <string name="team_A">TEAM A</string>
+    <string name="score_0">0</string>
+    <string name="takedown_teamA">Take Down(+2)</string>
+    <string name="Escape_teamA">Escape(+1)</string>
+    <string name="reversal_teamA">Reversal(+2)</string>
+    <string name="nearfall_teamA">Near Fall(+1)</string>
+    <string name="penalty_teamA">Penalty (+1 OPP)</string>
+    <string name="penalty2_teamA">Penalty (+2 OPP)</string>
+
+    <string name="team_B">TEAM B</string>
+    <string name="takedown_teamB">Take Down(+2)</string>
+    <string name="Escape_teamB">Escape(+1)</string>
+    <string name="reversal_teamB">Reversal(+2)</string>
+    <string name="nearfall_teamB">Near Fall(+1)</string>
+    <string name="penalty_teamB">Penalty (+1 OPP)</string>
+    <string name="penalty2_teamB">Penalty (+2 OPP)</string>
+
+    <string name="reset">RESET</string>
+
 </resources>

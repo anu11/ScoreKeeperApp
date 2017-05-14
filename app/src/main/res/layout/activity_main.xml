@@ -1,112 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.scorekeeperapp.MainActivity">
-<LinearLayout
-    android:layout_weight="1"
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TEAM A"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Take Down(2)"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Escape(1)"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reversal(2)"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Near Fall"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Penalty (+1 OPP)"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Penalty (+2 OPP)"/>
-
-    </LinearLayout>
-
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TEAM B"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.scorekeeperapp.MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:gravity="center_horizontal"
-            android:padding="4dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Take Down(2)"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/team_A"
+                android:textColor="#616161"
+                android:textSize="14sp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Escape(1)"/>
+            <TextView
+                android:id="@+id/score_TeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/score_0"
+                android:textColor="#000000"
+                android:textSize="56sp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reversal(2)"/>
+            <Button
+                android:id="@+id/takedownTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addTakedownForTeamA"
+                android:text="@string/takedown_teamA" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Near Fall"/>
+            <Button
+                android:id="@+id/escapeTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addEscapeForTeamA"
+                android:text="@string/Escape_teamA" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Penalty (+1 OPP)"/>
+            <Button
+                android:id="@+id/reversalTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addReversalForTeamA"
+                android:text="@string/reversal_teamA" />
 
-        <Button
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/nearfallTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addNearfallForTeamA"
+                android:text="@string/nearfall_teamA" />
+
+            <Button
+                android:id="@+id/penalty1TeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="PenaltyOneForTeamA"
+                android:text="@string/penalty_teamA" />
+
+            <Button
+                android:id="@+id/penalty2TeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="PenaltyTwoForTeamA"
+                android:text="@string/penalty2_teamA" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Penalty (+2 OPP)"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/team_B"
+                android:textColor="#616161"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/score_TeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/score_0"
+                android:textColor="#000000"
+                android:textSize="56sp" />
+
+            <Button
+                android:id="@+id/takedownTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addTakedownForTeamB"
+                android:text="@string/takedown_teamB" />
+
+            <Button
+                android:id="@+id/escapeTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addEscapeForTeamB"
+                android:text="@string/Escape_teamB" />
+
+            <Button
+                android:id="@+id/reversalTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addReversalForTeamB"
+                android:text="@string/reversal_teamB" />
+
+            <Button
+                android:id="@+id/nearfallTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addNearfallForTeamB"
+                android:text="@string/nearfall_teamB" />
+
+            <Button
+                android:id="@+id/penalty1TeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="PenaltyOneForTeamB"
+                android:text="@string/penalty_teamB" />
+
+            <Button
+                android:id="@+id/penalty2TeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="PenaltyTwoForTeamB"
+                android:text="@string/penalty2_teamB" />
+        </LinearLayout>
 
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetScore"
+        android:text="@string/reset" />
 
-</LinearLayout>
+</RelativeLayout>
